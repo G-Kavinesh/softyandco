@@ -20,8 +20,8 @@ const slides = [
     imagePadding: "24px",
   },
   {
-    bg: "#6B2340",
-    photoBg: "#4CC3EA",
+    bg: "#4CC3EA",
+    photoBg: "#6B2340",
     photoBorder: "#FFF4E2",
     photoShadow: "#F6A11E",
     ink: "#FFF4E2",
@@ -58,7 +58,7 @@ export default function FeaturedCarousel() {
   const s = slides[slide];
 
   return (
-    <section id="menu" style={{ position: "relative" }}>
+    <section id="menu" className="carousel-section" style={{ position: "relative" }}>
       <div
         className="carousel-inner"
         style={{
