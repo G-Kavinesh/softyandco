@@ -107,6 +107,13 @@ a {
 @media (max-width: 500px) {
   .hero-photo-side { display: none !important; }
   .hero-photos     { grid-template-columns: minmax(0, 1fr) !important; max-width: 260px !important; }
+  .hero-center-card {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
 }
 
 /* ─── Featured Carousel ─── */

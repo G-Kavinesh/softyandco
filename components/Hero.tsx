@@ -119,6 +119,7 @@ export default function Hero() {
           />
         </div>
         <div
+          className="hero-center-card"
           style={{
             aspectRatio: "3/4",
             border: "4px solid #4A1530",
