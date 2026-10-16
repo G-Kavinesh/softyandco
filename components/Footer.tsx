@@ -23,6 +23,7 @@ export default function Footer() {
           alignItems: "center",
           gap: "32px",
         }}
+        className="footer-main"
       >
         {/* Left: logo */}
         <div>
@@ -65,6 +66,7 @@ export default function Footer() {
 
         {/* Right: nav links */}
         <nav
+          className="footer-nav"
           style={{
             display: "flex",
             flexWrap: "wrap",

@@ -123,6 +123,20 @@ a {
   }
 }
 
+/* ─── Footer ─── */
+
+@media (max-width: 640px) {
+  .footer-main {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    text-align: center;
+    gap: 24px !important;
+  }
+  .footer-nav {
+    justify-content: center !important;
+  }
+}
+
 /* ─── Instagram grid ─── */
 
 /* 4 columns on desktop → 2×2 on mobile */
