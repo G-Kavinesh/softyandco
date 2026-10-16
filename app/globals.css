@@ -106,7 +106,7 @@ a {
 /* On very narrow screens, only show the centre photo */
 @media (max-width: 500px) {
   .hero-photo-side { display: none !important; }
-  .hero-photos     { grid-template-columns: minmax(0, 1fr) !important; max-width: 300px !important; }
+  .hero-photos     { grid-template-columns: minmax(0, 1fr) !important; max-width: 300px !important; margin-top: 16px !important; }
   .hero-center-card {
     background: transparent !important;
     border: none !important;
@@ -121,7 +121,7 @@ a {
 /* Tighter horizontal padding on mobile so content isn't squished */
 @media (max-width: 640px) {
   .carousel-section {
-    display: none;
+    display: block;
   }
   .carousel-inner {
     padding-left: 24px !important;
