@@ -7,8 +7,6 @@ const srcs = [
   "/googleimages/4.webp",
   "/googleimages/5.webp",
   "/googleimages/6.webp",
-  "/googleimages/7.jpg",
-  "/googleimages/8.jpg",
   "/googleimages/9.webp",
   "/googleimages/10.webp",
 ];
