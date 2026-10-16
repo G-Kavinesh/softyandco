@@ -107,7 +107,7 @@ export default function Hero() {
             borderRadius: "28px",
             overflow: "hidden",
             boxShadow: "8px 8px 0 #4A1530",
-            background: "#E0263C",
+            background: "#4CC3EA",
             position: "relative",
           }}
         >
@@ -125,7 +125,7 @@ export default function Hero() {
             borderRadius: "28px",
             overflow: "hidden",
             boxShadow: "8px 8px 0 #4A1530",
-            background: "#4CC3EA",
+            background: "#E0263C",
             position: "relative",
           }}
         >
