@@ -106,13 +106,14 @@ a {
 /* On very narrow screens, only show the centre photo */
 @media (max-width: 500px) {
   .hero-photo-side { display: none !important; }
-  .hero-photos     { grid-template-columns: minmax(0, 1fr) !important; max-width: 260px !important; }
+  .hero-photos     { grid-template-columns: minmax(0, 1fr) !important; max-width: 260px !important; margin-top: 16px !important; }
   .hero-center-card {
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     overflow: visible !important;
+    aspect-ratio: 4/3 !important;
   }
 }
 
