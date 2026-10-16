@@ -114,7 +114,7 @@ a {
 /* Tighter horizontal padding on mobile so content isn't squished */
 @media (max-width: 640px) {
   .carousel-section {
-    margin-bottom: 48px;
+    display: none;
   }
   .carousel-inner {
     padding-left: 24px !important;
