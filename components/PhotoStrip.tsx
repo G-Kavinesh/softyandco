@@ -23,7 +23,7 @@ export default function PhotoStrip() {
       <div style={{ overflow: "hidden" }}>
         <div
           style={{
-            display: "flex",
+            display: "inline-flex",
             animation: "photo-strip 16s linear infinite",
             willChange: "transform",
           }}
