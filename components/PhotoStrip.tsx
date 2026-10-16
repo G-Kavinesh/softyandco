@@ -20,12 +20,11 @@ export default function PhotoStrip() {
   return (
     <div style={{ borderTop: "4px solid #4A1530", borderBottom: "4px solid #4A1530", overflow: "hidden" }}>
       {/* Photo reel */}
-      <div style={{ overflow: "hidden", height: "320px" }}>
+      <div style={{ overflow: "hidden" }}>
         <div
           style={{
             display: "flex",
-            height: "100%",
-            animation: "softy-marquee 18s linear infinite",
+            animation: "softy-marquee 8s linear infinite",
             willChange: "transform",
           }}
         >
@@ -34,8 +33,10 @@ export default function PhotoStrip() {
               key={i}
               style={{
                 flexShrink: 0,
-                width: "320px",
-                height: "320px",
+                width: "50vw",
+                height: "50vw",
+                maxWidth: "320px",
+                maxHeight: "320px",
                 position: "relative",
               }}
             >
