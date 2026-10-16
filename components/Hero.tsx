@@ -8,7 +8,7 @@ export default function Hero() {
       style={{
         background: "#F6A11E",
         position: "relative",
-        padding: "clamp(8px,2vw,56px) clamp(16px,4vw,56px) 0",
+        padding: "clamp(24px,4vw,56px) clamp(16px,4vw,56px) 0",
         textAlign: "center",
         overflow: "hidden",
       }}
