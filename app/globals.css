@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: #FFF4E2;
+  --color-plum: #4A1530;
+  --color-deep-plum: #2A0A18;
+  --color-mid-plum: #6B2340;
+  --color-orange: #F6A11E;
+  --color-red: #E0263C;
+  --color-sky: #4CC3EA;
+  --color-pink: #F7B8D2;
+  --color-coral: #F08A6C;
+  --color-open: #3BD16F;
+
+  --font-display: var(--font-bagel);
+  --font-body: var(--font-bricolage);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FFF4E2;
+  color: #4A1530;
+  font-family: var(--font-bricolage), sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #4A1530;
+  text-decoration: none;
+}
+
+@keyframes softy-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-play-state: paused !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Pill buttons — shared hover lift */
+.btn-pill {
+  display: inline-block;
+  border-radius: 999px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  font-family: var(--font-bagel), sans-serif;
+}
+.btn-pill:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* Strip Instagram embed's built-in white border/padding */
+.instagram-media {
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Carousel nav circles */
+.carousel-btn {
+  transition: background 0.15s;
+}
+.carousel-btn:hover {
+  background: #F6A11E !important;
+}
+
+/* ─── Nav ─── */
+
+/* Left slot contents */
+.nav-links   { display: flex; align-items: center; gap: clamp(14px,3vw,40px); }
+.nav-toggle  { display: none; }
+
+/* Right slot */
+.nav-ig      { display: block; }
+
+/* Mobile drawer (hidden by default) */
+.nav-drawer  { display: none; }
+
+@media (max-width: 640px) {
+  /* Hide content inside the cells — the cells themselves stay in the 3-col grid */
+  .nav-links  { display: none; }
+  .nav-ig     { display: none; }
+}
+
+/* ─── Hero photos ─── */
+
+/* On very narrow screens, only show the centre photo */
+@media (max-width: 500px) {
+  .hero-photo-side { display: none !important; }
+  .hero-photos     { grid-template-columns: minmax(0, 1fr) !important; max-width: 260px !important; }
+}
+
+/* ─── Featured Carousel ─── */
+
+/* Tighter horizontal padding on mobile so content isn't squished */
+@media (max-width: 640px) {
+  .carousel-inner {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  /* Shrink the nav buttons a bit and bring them closer to the edges */
+  .carousel-btn {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 22px !important;
+  }
+}
+
+/* ─── Instagram grid ─── */
+
+/* 4 columns on desktop → 2×2 on mobile */
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 4px solid #4A1530;
+}
+
+@media (max-width: 640px) {
+  .ig-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Remove right border from col-2 and col-4 */
+  .ig-grid > div:nth-child(2),
+  .ig-grid > div:nth-child(4) {
+    border-right: none !important;
+  }
+  /* Add bottom border between the two rows */
+  .ig-grid > div:nth-child(1),
+  .ig-grid > div:nth-child(2) {
+    border-bottom: 4px solid #4A1530;
+  }
+  /* Ensure col-1 and col-3 still have right border */
+  .ig-grid > div:nth-child(1),
+  .ig-grid > div:nth-child(3) {
+    border-right: 4px solid #4A1530 !important;
+  }
 }
