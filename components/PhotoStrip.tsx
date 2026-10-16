@@ -11,8 +11,8 @@ const srcs = [
   "/googleimages/10.webp",
 ];
 
-// duplicate for seamless loop
-const photos = [...srcs, ...srcs];
+// 4x for seamless loop (animate to -25%)
+const photos = [...srcs, ...srcs, ...srcs, ...srcs];
 
 const words = Array(10).fill("SWIRLING IN GOOD TIMES · ").join("");
 
@@ -24,7 +24,7 @@ export default function PhotoStrip() {
         <div
           style={{
             display: "flex",
-            animation: "softy-marquee 8s linear infinite",
+            animation: "photo-strip 16s linear infinite",
             willChange: "transform",
           }}
         >
