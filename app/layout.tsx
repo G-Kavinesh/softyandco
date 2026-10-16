@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: "Softy & Co — Swirling in good times",
   description:
     "Soft serve, sundaes and new drops on Duplication Rd, Colombo 04. Open till midnight, and 1am on weekends.",
+  icons: { icon: "/favicon.png" },
   openGraph: {
     title: "Softy & Co",
     description: "Soft serve & sundaes · Colombo 04",
